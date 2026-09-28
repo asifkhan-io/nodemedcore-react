@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from "react";
 import "./Banner.css";
-import { Helmet } from "react-helmet-async";
 
 const initialRows = [
   {
@@ -145,87 +144,45 @@ const ClaimTrackerCard = () => {
 
 const Banner = () => {
   return (
-    <>
-      <Helmet>
-        <title>NodeMedCore | Medical Billing & Revenue Cycle Management</title>
+    <section className='banner' id='banner'>
+      <div className='container'>
+        <div className='banner_inner'>
+          <div className='banner__content'>
+            <span className='banner_eyebrow'>
+              <i className='banner_eyebrow-dot' />
+              Medical billing & revenue cycle management
+            </span>
 
-        <meta
-          name='description'
-          content='NodeMedCore handles coding, submission, and denial management for independent practices — so claims go out clean, payers respond faster, and nothing sits stuck in a queue.'
-        />
+            <h1 className='banner__heading'>
+              Every claim follows a <br /> path.
+              <br />
+              We keep it moving to <br />
+              <span className='banner__accent'>paid</span>
+              <span id='dot'>.</span>
+            </h1>
 
-        <meta
-          property='og:title'
-          content='NodeMedCore | Medical Billing & Revenue Cycle Management'
-        />
+            <p className='banner_desc'>
+              Nodemedcore handles coding, submission, and denial management for
+              independent practices — so claims go out clean, payers respond
+              faster, and nothing sits stuck in a queue.
+            </p>
 
-        <meta
-          property='og:description'
-          content='NodeMedCore handles coding, submission, and denial management for independent practices.'
-        />
-
-        <meta property='og:type' content='website' />
-        <meta property='og:url' content='https://nodemedcore.com/' />
-        <meta
-          property='og:image'
-          content='https://nodemedcore.com/og-image.png'
-        />
-
-        <meta name='twitter:card' content='summary_large_image' />
-        <meta
-          name='twitter:title'
-          content='NodeMedCore | Medical Billing & Revenue Cycle Management'
-        />
-        <meta
-          name='twitter:description'
-          content='NodeMedCore handles coding, submission, and denial management for independent practices.'
-        />
-        <meta
-          name='twitter:image'
-          content='https://nodemedcore.com/og-image.png'
-        />
-      </Helmet>
-
-      <section className='banner' id='banner'>
-        <div className='container'>
-          <div className='banner_inner'>
-            <div className='banner__content'>
-              <span className='banner_eyebrow'>
-                <i className='banner_eyebrow-dot' />
-                Medical billing & revenue cycle management
-              </span>
-
-              <h1 className='banner__heading'>
-                Every claim follows a <br /> path.
-                <br />
-                We keep it moving to <br />
-                <span className='banner__accent'>paid</span>
-                <span id='dot'>.</span>
-              </h1>
-
-              <p className='banner_desc'>
-                Nodemedcore handles coding, submission, and denial management
-                for independent practices — so claims go out clean, payers
-                respond faster, and nothing sits stuck in a queue.
-              </p>
-
-              <div className='banner__actions'>
-                <a href='#contact' className='btn btn--primary btn--gradient'>
-                  Book free billing audit
-                </a>
-                <a href='#howitworks' className='btn btn--link'>
-                  See how a claim moves <ArrowIcon color='currentColor' />
-                </a>
-              </div>
-            </div>
-
-            <div className='banner_visual'>
-              <ClaimTrackerCard />
+            <div className='banner__actions'>
+              <a href='#contact' className='btn btn--primary btn--gradient'>
+                Book free billing audit
+              </a>
+              <a href='#howitworks' className='btn btn--link'>
+                See how a claim moves <ArrowIcon color='currentColor' />
+              </a>
             </div>
           </div>
+
+          <div className='banner_visual'>
+            <ClaimTrackerCard />
+          </div>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 };
 

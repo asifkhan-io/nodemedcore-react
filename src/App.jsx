@@ -7,11 +7,10 @@ import Whyus from "./components/Whyus/Whyus";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 import Banner from "./components/Banner/Banner";
-import { HelmetProvider } from "react-helmet-async";
 
 function App() {
   return (
-    <HelmetProvider>
+    <>
       <Header />
       <Banner />
       <StatsSection />
@@ -20,7 +19,7 @@ function App() {
       <Whyus />
       <Contact />
       <Footer />
-    </HelmetProvider>
+    </>
   );
 }
 
